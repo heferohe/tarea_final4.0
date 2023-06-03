@@ -2,30 +2,33 @@
 <html>
 <head>
     <title>Traductor</title>
+    
 </head>
 <body>
     
-    <h1>Traductor simple</h1>
+    <h1>ESTIMADOR DE INDICE DE BIODEGRADABILIDAD DE PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES</h1>
+    
+    <!--<body style="background-color: LightBlue;"> -->
+
     <form method="POST">
-        <input type="text" name="text" placeholder="Introduce el texto aquí" required>
-        <select name="language">
-            <option value="en">Inglés</option>
-            <option value="es">Español</option>
-            <option value="fr">Francés</option>
-            <option value="de">Alemán</option>
-            <!-- Añade aquí más opciones de idioma según tus necesidades -->
-        </select>
-        <input type="submit" value="Traducir">
+        <input type="text" name="text" placeholder="Introduce DBOS" required>
+		<input type="text2" name="text2" placeholder="Introduce DQOS" required>
+		<input type="text2" name="text2" placeholder="Introduce RDDBOP" required>
+		<input type="text2" name="text2" placeholder="Introduce RDDBOS" required>
+		<input type="text2" name="text2" placeholder="Introduce RDDBOG" required>
+		<input type="text2" name="text2" placeholder="Introduce RDDQOS" required>
+		<input type="text2" name="text2" placeholder="Introduce RDDQOG" required>
+        <input type="submit" value="Calcular Indice">
     </form>
 
-    {% if translated_text %}
-    <h2>Texto traducido:</h2>
-    <p>{{ translated_text }}</p>
+    {% if indice %}
+    <h2>Indice de Biodegradabilidad:</h2>
+    <p>{{ indice }}</p>
     {% endif %}
 
-    {% if lang_detected %}
+   <!-- {% if lang_detected %}
     <h2>Idioma de entrada detectado:</h2>
     <p>{{ lang_detected }}</p>
-    {% endif %}
+    {% endif %}-->
 </body>
 </html>
