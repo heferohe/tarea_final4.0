@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template
 import os
 import requests, json
+import azure.functions as func
+from joblib import load
 #import joblib
 
 
