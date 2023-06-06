@@ -18,10 +18,17 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        text = request.form['text']
+        text1 = request.form['text1']
+        text2 = request.form['text2']
+        text3 = request.form['text3']
+        text4 = request.form['text4']
+        text5 = request.form['text5']
+        text6 = request.form['text6']
+        text7 = request.form['text7']
+           
         # Aquí es donde procesarías el texto. Por ahora, solo devolvemos el mismo texto.
         source_language = ''
-        translated_text = text
+        translated_text = text1+text2+text3+text4+text5+text6+text7
 
         return render_template('home.html', translated_text=translated_text,lang_detected=source_language)
     
