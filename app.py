@@ -28,7 +28,7 @@ def home():
         model = load('modelv2.joblib') # Carga del modelo.
         indice2 = model.predict([[21.0,72.0,37.8,65.6,70.8,60.0,60.0]])
 
-        return render_template('home.html', indice=indice,lang_detected=source_language)
+        return render_template('home.html', indice=indice2,lang_detected=source_language)
     
     return render_template('home.html')
 
