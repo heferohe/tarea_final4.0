@@ -25,8 +25,8 @@ def home():
         indice = text1+text2+text3+text4+text5+text6+text7
         # knn = joblib.load('modelo_entrenado.pkl') # Carga del modelo.
         # indice =knn.predict([[21.0,72.0,37.8,65.6,70.8,60.0,60.0]])
-        model = load('modelv2.joblib') # Carga del modelo.
-        indice2 = model.predict([[21.0,72.0,37.8,65.6,70.8,60.0,60.0]])
+        #model = load('modelv2.joblib') # Carga del modelo.
+        #indice2 = model.predict([[21.0,72.0,37.8,65.6,70.8,60.0,60.0]])
 
         return render_template('home.html', indice=indice,lang_detected=source_language)
     
