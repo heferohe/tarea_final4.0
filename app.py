@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template
 import os
 import requests, json
-from sklearn.externals import joblib
-import sklearn
+#from sklearn.externals import joblib
+#import sklearn
 #from joblib import load
 #import joblib
 
