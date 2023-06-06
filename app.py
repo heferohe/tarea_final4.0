@@ -19,6 +19,7 @@ def home():
         text5 = request.form['text5']
         text6 = request.form['text6']
         text7 = request.form['text7']
+        variable1=float(text1)
            
         # Aquí es donde procesarías el texto. Por ahora, solo devolvemos el mismo texto.
         source_language = ''
@@ -26,7 +27,7 @@ def home():
         # knn = joblib.load('modelo_entrenado.pkl') # Carga del modelo.
         # indice =knn.predict([[21.0,72.0,37.8,65.6,70.8,60.0,60.0]])
         model = load('modelv2.joblib') # Carga del modelo.
-        indice2 = model.predict([[text1,72.0,37.8,65.6,70.8,60.0,60.0]])
+        indice2 = model.predict([[variable1,72.0,37.8,65.6,70.8,60.0,60.0]])
 
         return render_template('home.html', indice=indice2,lang_detected=source_language)
     
