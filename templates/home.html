@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Traductor</title>
-<style>
+  <title>ptar</title>
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <style>
     body {
       background-image: url("https://raw.githubusercontent.com/heferohe/tarea_final4.0/main/templates/Imagen39.png");
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    .custom {
+      --card-width: 350px;
+      padding: 16px;
+      margin: 0 auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      margin: auto 0;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    .result {
+      font-size: 18px;
+      color: tomato;
+      text-align: center;
+      font-weight: bold;
+    }
   </style>
-    
+
 </head>
+
 <body>
-    
-    <h1>ESTIMADOR DE INDICE DE BIODEGRADABILIDAD DE PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES</h1>
-    
-    <!--<body style="background-color: LightBlue;"> -->
-
-    <form method="POST">
-        	<input type="number" name="text1" step="any" placeholder="Introduce DBOS" required>
-		<input type="number" name="text2" step="any" placeholder="Introduce DQOS" required>
-		<input type="number" name="text3" step="any" placeholder="Introduce RDDBOP" required>
-		<input type="number" name="text4" step="any" placeholder="Introduce RDDBOS" required>
-		<input type="number" name="text5" step="any" placeholder="Introduce RDDBOG" required>
-		<input type="number" name="text6" step="any" placeholder="Introduce RDDQOS" required>
-		<input type="number" name="text7" step="any" placeholder="Introduce RDDQOG" required>
-        <input type="submit" value="Calcular Indice">
+  <fluent-card class="custom">
+    <h4>ESTIMADOR DE INDICE DE BIODEGRADABILIDAD DE PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES</h4>
+    <form method="POST"><fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text1" placeholder="Introduce DBOS"
+        appearance="outline" required>DBOS:</fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text2" placeholder="Introduce DQOS" appearance="outline"
+        hideStep required>DQOS: </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text3" placeholder="Introduce RDDBOP" appearance="outline"
+        hideStep required>RDDBOP: </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text4" placeholder="Introduce RDDBOS" appearance="outline"
+        hideStep required>RDDBOS: </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text5" placeholder="Introduce RDDBOG" appearance="outline"
+        hideStep required>RDDBOG: </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text6" placeholder="Introduce RDDQOS" appearance="outline"
+        hideStep required>RDDQOS: </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text7" placeholder="Introduce RDDQOG" appearance="outline"
+        hideStep required>RDDQOG: </fluent-text-field>
+      <fluent-button type="submit" appearance="accent">Calcular</fluent-button>
     </form>
-
+    <h4>Indice de Biodegradabilidad:</h4>
     {% if indice %}
-    <h2>Indice de Biodegradabilidad</h2>
-    <p>{{ indice }}</p>
+    <p class="result">{{ indice }}</p>
     {% endif %}
-
-   <!-- {% if lang_detected %}
-    <h2>Idioma de entrada detectado:</h2>
-    <p>{{ lang_detected }}</p>
-    {% endif %}-->
+  </fluent-card>
 </body>
+
 </html>
