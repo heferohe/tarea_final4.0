@@ -42,23 +42,23 @@
 <body>
   <fluent-card class="custom">
     <h4>ESTIMADOR DE INDICE DE BIODEGRADABILIDAD DE PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES</h4>
-    <form method="POST"><fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text1" placeholder="Introduce DBOS"
+    <form method="POST"><fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text1" placeholder="Introduce el valor"
         appearance="outline" required>DBO a la entrada de la planta</fluent-text-field>
-      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text2" placeholder="Introduce DQOS" appearance="outline"
-        hideStep required>DQOS: </fluent-text-field>
-      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text3" placeholder="Introduce RDDBOP" appearance="outline"
-        hideStep required>RDDBOP: </fluent-text-field>
-      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text4" placeholder="Introduce RDDBOS" appearance="outline"
-        hideStep required>RDDBOS: </fluent-text-field>
-      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text5" placeholder="Introduce RDDBOG" appearance="outline"
-        hideStep required>RDDBOG: </fluent-text-field>
-      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text6" placeholder="Introduce RDDQOS" appearance="outline"
-        hideStep required>RDDQOS: </fluent-text-field>
-      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text7" placeholder="Introduce RDDQOG" appearance="outline"
-        hideStep required>RDDQOG: </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text2" placeholder="Introduce el valor" appearance="outline"
+        hideStep required>DQO a la entrada de la planta </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text3" placeholder="Introduce el valor" appearance="outline"
+        hideStep required>RDDBO a la entrada del tratamiento primario </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text4" placeholder="Introduce el valor" appearance="outline"
+        hideStep required>RDDBO a la entrada del tratamiento secundario  </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text5" placeholder="Introduce el valor" appearance="outline"
+        hideStep required>RDDBO global </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text6" placeholder="Introduce el valor" appearance="outline"
+        hideStep required>RDDQO a la entrada del tratamiento secundario </fluent-text-field>
+      <fluent-text-field pattern="[0-9]+([\.,][0-9]+)?" name="text7" placeholder="Introduce el valor" appearance="outline"
+        hideStep required>RDDQO global </fluent-text-field>
       <fluent-button type="submit" appearance="accent">Calcular</fluent-button>
     </form>
-    <h4>Indice de Biodegradabilidad:</h4>
+    <h4>Indice de Biodegradabilidad</h4>
     {% if indice %}
     <p class="result">{{ indice }}</p>
     {% endif %}
